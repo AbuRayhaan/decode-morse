@@ -27,4 +27,13 @@ def decode_alphabet(alphabet)
         'Y' => '-.--',
         'Z' => '--..',
     }
+    morse_codes.key(alphabet)
+end
+
+def decode_word(word)
+
+end
+
+def decode_message(msg)
+
 end
