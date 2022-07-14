@@ -31,9 +31,17 @@ def decode_alphabet(alphabet)
 end
 
 def decode_word(word)
-
+  array = word.split
+  wordarray = []
+  array.each { |letter| wordarray.push(decode_alphabet(letter)) }
+  wordarray.join
 end
 
-def decode_message(msg)
-
+def decode_sentence(msg)
+  msgarray = msg.split('   ')
+  sentencearray = []
+  msgarray.each { |word| sentencearray.push(decode_word(word)) }
+  sentencearray.join(' ')
 end
+
+puts decode_sentence('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
